@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap-breakpoints",
+  "version": "0.0.1",
+  "authors": [
+    "Andrew Walker <contact@awalker.ca>"
+  ],
+  "description": "Angular directive that exposes Bootstrap's Responsive Breakpoints through a Service, as well as a change event",
+  "main": "bootstrap-breakpoints.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
