@@ -29,7 +29,7 @@ angular.module('aw.bootstrap-breakpoints',[]).directive('bootstrapBreakpoints', 
         }
     };
     return directive;
-}]).factory('Breakpoint', [function () {
+}]).provider('Breakpoint', [function () {
     var BREAKPOINTS = {
         XS: 'XS',
         SM: 'SM',
@@ -54,8 +54,13 @@ angular.module('aw.bootstrap-breakpoints',[]).directive('bootstrapBreakpoints', 
         }
     };
 
-    return {
-        BREAKPOINTS: BREAKPOINTS,
-        current: get_breakpoint
+    this.BREAKPOINTS = BREAKPOINTS;
+    this.current = get_breakpoint;
+    
+    this.$get = function () {
+        return {
+            BREAKPOINTS: BREAKPOINTS,
+            current: get_breakpoint
+        }
     };
 }]);
